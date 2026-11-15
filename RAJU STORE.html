@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RAJU STORE – Your Style, Your Identity.</title>
+<meta name="description" content="RAJU STORE: premium fashion and lifestyle for men, women and kids in Bangladesh.">
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#666;--card:#f6f3f1;--line:#e4dfdc;--bur:#6d1a2b;--gold:#b8934a;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121010;--fg:#f4efec;--mut:#a79f9b;--card:#1d1919;--line:#332d2d;--bur:#a8334a}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 Inter,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.bar{background:var(--bur);color:#fff;text-align:center;padding:7px 10px;font-size:13px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;gap:14px;padding:12px 20px;max-width:1200px;margin:auto;flex-wrap:wrap}
+.logo{font:700 22px Georgia,serif;letter-spacing:.18em}.logo b{color:var(--gold)}
+.links{display:flex;gap:16px;flex:1;flex-wrap:wrap;font-size:14px}.links a:hover{color:var(--bur)}
+input,select{padding:9px 11px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:6px;font:inherit;max-width:100%}
+.icons button{background:none;border:0;color:var(--fg);font-size:14px;padding:6px}
+main{max-width:1200px;margin:auto;padding:20px}
+.hero{background:linear-gradient(120deg,#111,var(--bur));color:#fff;border-radius:14px;padding:64px 32px}
+.hero h1{font:700 clamp(30px,6vw,56px)/1.1 Georgia,serif;margin:0 0 10px}.hero p{color:#e8d9b5;margin:0 0 24px}
+.btn{display:inline-block;background:var(--bur);color:#fff;border:1px solid var(--bur);padding:11px 22px;border-radius:6px;margin-right:8px}
+.btn.o{background:none;border-color:currentColor}.hero .btn{background:var(--gold);border-color:var(--gold);color:#111}.hero .btn.o{background:none;color:#fff;border-color:#fff}
+h2{font:600 24px Georgia,serif;margin:36px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:var(--card);border-radius:10px;overflow:hidden;position:relative}
+.img{aspect-ratio:4/5;display:grid;place-items:center;font-size:64px}
+.card .in{padding:12px}.price s{color:var(--mut);margin-left:6px;font-size:13px}.price{font-weight:600}
+.tag{position:absolute;top:8px;left:8px;background:var(--gold);color:#111;font-size:11px;padding:2px 8px;border-radius:20px}
+.heart{position:absolute;top:6px;right:8px;background:none;border:0;font-size:20px;color:var(--bur)}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.cats a{background:var(--card);padding:26px 10px;text-align:center;border-radius:10px;font-weight:600}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}@media(max-width:700px){.split{grid-template-columns:1fr}}
+.chip{border:1px solid var(--line);background:none;color:var(--fg);padding:6px 12px;border-radius:20px;margin:0 6px 6px 0}.chip.on{background:var(--fg);color:var(--bg)}
+.row{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;flex-wrap:wrap}
+.note{background:var(--card);border-left:4px solid var(--gold);padding:12px 14px;border-radius:6px;margin:14px 0}
+form label{display:block;margin:10px 0 4px;font-size:13px}form input,form select{width:100%}.err{color:#c0392b;font-size:12px}
+footer{background:#111;color:#bbb;padding:30px 20px;margin-top:50px;text-align:center;font-size:13px}footer a{margin:0 8px}
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px}.fab a{background:#25a244;color:#fff;padding:10px 14px;border-radius:30px;font-size:13px}.fab a+a{background:#0a7cff}
+</style></head><body>
+<div class="bar">Free styling advice on WhatsApp · Use code RAJU10 for 10% off (demo coupon)</div>
+<header><div class="nav">
+<a class="logo" href="#home">◆ RAJU<b> STORE</b></a>
+<nav class="links"><a href="#shop">Shop All</a><a href="#shop-men">Men</a><a href="#shop-women">Women</a><a href="#shop-kids">Kids</a><a href="#shop-sale">Sale</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
+<input id="q" list="sug" placeholder="Search products…" aria-label="Search"><datalist id="sug"></datalist>
+<span class="icons"><button onclick="location.hash='account'">Login</button><button onclick="location.hash='wishlist'">♡ <span id="wc">0</span></button><button onclick="location.hash='cart'">🛍 <span id="cc">0</span></button></span>
+</div></header>
+<main id="app"></main>
+<footer><div class="logo" style="color:#fff">RAJU<b> STORE</b></div><p>Your Style, Your Identity.</p>
+<p><a href="#about">About</a><a href="#faq">FAQ</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#returns">Returns</a><a href="#shipping">Shipping</a><a href="#tracking">Track Order</a></p><p>© 2026 RAJU STORE</p></footer>
+<div class="fab"><a id="wa" href="#contact">WhatsApp</a><a href="#contact">Messenger</a></div>
+<script>
+const WA="";/* set your WhatsApp number, e.g. 8801XXXXXXXXX */
+const C={men:"Men’s Fashion",women:"Women’s Fashion",kids:"Kids Fashion",tshirts:"T-Shirts",shirts:"Shirts",pants:"Pants & Jeans",hoodies:"Hoodies",jackets:"Jackets",shoes:"Shoes",bags:"Bags",acc:"Accessories"};
+const P=[
+[1,"Classic Black Tee","men","tshirts",990,790,"👕",1,4.6],[2,"Burgundy Polo Shirt","men","tshirts",1290,0,"👔",1,4.4],
+[3,"Linen Casual Shirt","men","shirts",1890,1490,"👕",0,4.5],[4,"Slim Fit Jeans","men","pants",2490,1990,"👖",0,4.3],
+[5,"Oversized Hoodie","women","hoodies",2290,0,"🧥",1,4.8],[6,"Floral Kurti","women","shirts",1790,1390,"👗",1,4.7],
+[7,"Winter Puffer Jacket","men","jackets",4490,3590,"🧥",0,4.6],[8,"Leather Sneakers","men","shoes",3290,0,"👟",1,4.5],
+[9,"City Backpack","women","bags",2190,1790,"🎒",0,4.4],[10,"Kids Graphic Tee","kids","tshirts",690,550,"👕",1,4.5],
+[11,"Kids Denim Set","kids","pants",1590,0,"👖",0,4.2],[12,"Gold-Tone Watch","women","acc",2990,2390,"⌚",1,4.7]
+].map(a=>({id:a[0],n:a[1],g:a[2],c:a[3],p:a[4],d:a[5]||a[4],e:a[6],nw:a[7],r:a[8],sale:!!a[5],col:["Black","Burgundy","White"],s:["S","M","L","XL","XXL"]}));
+const tones=["#e9ddd6","#d9c7b8","#e4d3d7","#cfd8d3"];
+const ld=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))||f}catch(e){return f}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let cart=ld("rs_cart",[]),wish=ld("rs_wish",[]),coupon=null,F={cat:"all",max:99999,size:"",sort:"new"};
+const $=s=>document.querySelector(s),tk=n=>"৳"+n.toLocaleString("en-US");
+const fmt=n=>n.toLocaleString("en-US");
+$("#sug").innerHTML=P.map(p=>`<option value="${p.n}">`).join("");
+if(WA)$("#wa").href="https://wa.me/"+WA;
+$("#q").onchange=e=>{const p=P.find(x=>x.n.toLowerCase()==e.target.value.toLowerCase());location.hash=p?"product-"+p.id:"shop";};
+function card(p){return `<div class="card"><a href="#product-${p.id}"><div class="img" style="background:${tones[p.id%4]}">${p.e}</div></a>${p.sale?'<span class="tag">SALE</span>':p.nw?'<span class="tag">NEW</span>':''}<button class="heart" aria-label="Wishlist" onclick="tw(${p.id})">${wish.includes(p.id)?"♥":"♡"}</button><div class="in"><a href="#product-${p.id}">${p.n}</a><div class="price">${tk(p.d)}${p.sale?`<s>${tk(p.p)}</s>`:""}</div><small>★ ${p.r}</small></div></div>`}
+function tw(id){wish=wish.includes(id)?wish.filter(x=>x!=id):[...wish,id];sv("rs_wish",wish);route()}
+function addC(id,buy){const s=$("#sz")?.value||"M",c=$("#cl")?.value||"Black";const i=cart.find(x=>x.id==id&&x.s==s&&x.c==c);i?i.q++:cart.push({id,s,c,q:1});sv("rs_cart",cart);buy?location.hash="checkout":route()}
+function tot(){const sub=cart.reduce((a,i)=>a+P.find(p=>p.id==i.id).d*i.q,0);const dis=coupon?Math.round(sub*.1):0;return{sub,dis}}
+function sec(t,list){return `<h2>${t}</h2><div class="grid">${list.map(card).join("")}</div>`}
+const info={about:["About Us","RAJU STORE is a Bangladesh-based fashion and lifestyle brand. Replace this text with your real story."],
+faq:["FAQ","How long is delivery? Inside Dhaka and outside Dhaka timelines go here. Can I return items? See the Returns page."],
+privacy:["Privacy Policy","Placeholder: add your real privacy policy before launch."],terms:["Terms & Conditions","Placeholder: add your real terms before launch."],
+returns:["Return & Refund Policy","Placeholder: add your real return window and conditions."],shipping:["Shipping & Delivery Policy","Placeholder: Inside Dhaka ৳70, outside Dhaka ৳130 (sample rates, edit in code)."],
+blog:["Blog / Fashion News","Fashion articles will appear here once a CMS or database is connected."]};
+const need=(t,w)=>`<h2>${t}</h2><div class="note"><b>Needs a backend.</b> ${w} This page is a static storefront, so it cannot safely do this yet. Nothing here is faked.</div>`;
+function route(){
+const [a,b]=(location.hash.slice(1)||"home").split("-");let h="";
+$("#wc").textContent=wish.length;$("#cc").textContent=cart.reduce((x,i)=>x+i.q,0);
+if(a=="home"){h=`<section class="hero"><h1>Discover Your Perfect Style.</h1><p>Explore the Latest Fashion Trends at RAJU STORE.</p><a class="btn" href="#shop">Shop Now</a><a class="btn o" href="#shop-new">Explore Collection</a></section>
+<h2>Featured Categories</h2><div class="cats">${["men","women","kids","shoes","bags","acc"].map(k=>`<a href="#shop-${k}">${C[k]}</a>`).join("")}</div>`
++sec("New Arrivals",P.filter(p=>p.nw).slice(0,4))+sec("Best Sellers",[...P].sort((x,y)=>y.r-x.r).slice(0,4))+sec("Special Discount Offers",P.filter(p=>p.sale).slice(0,4))
++`<h2>Customer Testimonials</h2><div class="note">Add real customer reviews here. Sample reviews are not shown to avoid fake testimonials.</div>
+<h2>Newsletter</h2><form onsubmit="event.preventDefault();this.innerHTML='<div class=note>Newsletter signup needs a backend or email service, so your email was not saved.</div>'"><input type="email" required placeholder="Your email" style="width:260px"> <button class="btn">Subscribe</button></form>`}
+else if(a=="shop"){let L=[...P];const g=b||"all";
+if(["men","women","kids"].includes(g))L=L.filter(p=>p.g==g);else if(C[g])L=L.filter(p=>p.c==g);else if(g=="sale")L=L.filter(p=>p.sale);else if(g=="new")L=L.filter(p=>p.nw);
+if(F.cat!="all")L=L.filter(p=>p.c==F.cat);L=L.filter(p=>p.d<=F.max);
+if(F.sort=="lo")L.sort((x,y)=>x.d-y.d);if(F.sort=="hi")L.sort((x,y)=>y.d-x.d);if(F.sort=="rt")L.sort((x,y)=>y.r-x.r);
+h=`<h2>${C[g]||{sale:"Discount & Sale",new:"New Arrivals"}[g]||"Shop All Products"}</h2>
+<div class="row"><select onchange="F.cat=this.value;route()"><option value="all">All categories</option>${Object.keys(C).filter(k=>!["men","women","kids"].includes(k)).map(k=>`<option value="${k}" ${F.cat==k?"selected":""}>${C[k]}</option>`).join("")}</select>
+<select onchange="F.max=+this.value;route()">${[[99999,"Any price"],[1000,"Under ৳1,000"],[2000,"Under ৳2,000"],[3500,"Under ৳3,500"]].map(x=>`<option value="${x[0]}" ${F.max==x[0]?"selected":""}>${x[1]}</option>`).join("")}</select>
+<select onchange="F.sort=this.value;route()">${[["new","Newest"],["rt","Top rated"],["lo","Price: low to high"],["hi","Price: high to low"]].map(x=>`<option value="${x[0]}" ${F.sort==x[0]?"selected":""}>${x[1]}</option>`).join("")}</select></div>
+${L.length?`<div class="grid">${L.map(card).join("")}</div>`:"<p>No products match these filters.</p>"}`}
+else if(a=="product"){const p=P.find(x=>x.id==b);if(!p){h="<p>Product not found.</p>"}else h=`<div class="split"><div class="card"><div class="img" style="background:${tones[p.id%4]};font-size:120px">${p.e}</div></div><div>
+<h1 style="font-family:Georgia,serif">${p.n}</h1><div class="price" style="font-size:22px">${tk(p.d)}${p.sale?`<s>${tk(p.p)}</s>`:""}</div><p>★ ${p.r} · SKU RS-${1000+p.id} · In stock</p>
+<p>Premium quality ${C[p.c].toLowerCase()} from RAJU STORE. Replace with real product details.</p>
+<label>Size <select id="sz">${p.s.map(s=>`<option>${s}</option>`).join("")}</select></label> <label>Color <select id="cl">${p.col.map(s=>`<option>${s}</option>`).join("")}</select></label><p>
+<button class="btn" onclick="addC(${p.id})">Add to Cart</button><button class="btn o" onclick="addC(${p.id},1)">Buy Now</button><button class="btn o" onclick="tw(${p.id})">${wish.includes(p.id)?"♥ Saved":"♡ Wishlist"}</button></p></div></div>`
++sec("Related Products",P.filter(x=>x.g==p.g&&x.id!=p.id).slice(0,4))}
+else if(a=="wishlist"){h=wish.length?sec("Wishlist",P.filter(p=>wish.includes(p.id))):"<h2>Wishlist</h2><p>Your wishlist is empty.</p>"}
+else if(a=="cart"){const t=tot();h="<h2>Shopping Cart</h2>"+(cart.length?cart.map((i,n)=>{const p=P.find(x=>x.id==i.id);return `<div class="row"><span style="font-size:34px">${p.e}</span><div style="flex:1">${p.n}<br><small>${i.s} · ${i.c} · ${tk(p.d)}</small></div><button class="chip" onclick="cart[${n}].q>1?cart[${n}].q--:cart.splice(${n},1);sv('rs_cart',cart);route()">−</button>${i.q}<button class="chip" onclick="cart[${n}].q++;sv('rs_cart',cart);route()">+</button><button class="chip" onclick="cart.splice(${n},1);sv('rs_cart',cart);route()">Remove</button></div>`}).join("")
++`<p><input id="cp" placeholder="Coupon code"> <button class="chip" onclick="coupon=$('#cp').value.trim().toUpperCase()=='RAJU10'||null;if(!coupon)alert('Invalid code');route()">Apply</button> ${coupon?"RAJU10 applied (demo)":""}</p>
+<p>Subtotal ${tk(t.sub)}<br>Discount −${tk(t.dis)}<br><b>Total before delivery ${tk(t.sub-t.dis)}</b></p><a class="btn" href="#checkout">Checkout</a>`:"<p>Your cart is empty. <a href='#shop'><u>Start shopping</u></a></p>")}
+else if(a=="checkout"){const t=tot();h="<h2>Checkout</h2>"+(!cart.length?"<p>Your cart is empty.</p>":`<div class="split"><form id="ck" novalidate onsubmit="return co(event)">
+<label>Full name<input name="n"></label><label>Phone (01XXXXXXXXX)<input name="p"></label><label>Address<input name="a"></label>
+<label>Delivery<select name="z" onchange="dz(this.value)"><option value="70">Inside Dhaka (৳70)</option><option value="130">Outside Dhaka (৳130)</option></select></label>
+<label>Payment<select name="m"><option>Cash on Delivery</option><option>bKash</option><option>Nagad</option><option>Rocket</option></select></label><div class="err" id="er"></div><p><button class="btn">Prepare Order Request</button></p></form>
+<div><p>Subtotal ${tk(t.sub)}<br>Discount −${tk(t.dis)}<br>Delivery <span id="dv">৳70</span></p><div class="note"><b>No online payment is connected.</b> bKash, Nagad, Rocket and SSLCommerz need a backend and merchant accounts. This button only prepares an order message for you to send via WhatsApp. It does not place or confirm an order.</div></div></div>`)}
+else if(a=="tracking"){h=need("Order Tracking","Real order status requires an orders database.")}
+else if(a=="account"){h=need("Login, Registration & My Account","Secure authentication, order history, saved addresses and password changes need a server and database.")+need("Admin Dashboard","Product, order, coupon, banner and sales management with protected admin routes must be built on a real backend (for example Supabase, Firebase or Node + database).")}
+else if(a=="contact"){h=`<h2>Contact Us</h2><p>WhatsApp and Messenger buttons are set up once you add your number and page link in the code.</p><form onsubmit="event.preventDefault();this.innerHTML='<div class=note>The contact form needs a backend to send messages, so nothing was sent. Please use WhatsApp.</div>'"><label>Name<input required></label><label>Message<input required></label><p><button class="btn">Send</button></p></form>`}
+else if(info[a]){h=`<h2>${info[a][0]}</h2><p>${info[a][1]}</p>`}
+else h="<p>Page not found.</p>";
+$("#app").innerHTML=h;scrollTo(0,0)}
+function dz(v){$("#dv").textContent=tk(+v)}
+function co(e){e.preventDefault();const f=new FormData($("#ck")),n=f.get("n").trim(),p=f.get("p").trim(),a=f.get("a").trim();
+if(n.length<2||!/^01\d{9}$/.test(p)||a.length<8){$("#er").textContent="Please enter your name, a valid 11-digit phone number and a full address.";return false}
+const t=tot(),d=+f.get("z"),lines=cart.map(i=>{const x=P.find(y=>y.id==i.id);return `${x.n} (${i.s}, ${i.c}) x${i.q}`}).join("%0A");
+const msg=`Order request%0A${lines}%0ATotal: ${t.sub-t.dis+d} BDT%0A${n}, ${p}%0A${a}%0APayment: ${f.get("m")}`;
+$("#ck").outerHTML=`<div class="note"><b>Order request prepared, not yet placed.</b><br>${WA?`<a class="btn" href="https://wa.me/${WA}?text=${msg}">Send on WhatsApp</a>`:"Add your WhatsApp number in the code (WA constant) to enable sending."}</div>`;return false}
+addEventListener("hashchange",route);route();
+</script></body></html>
